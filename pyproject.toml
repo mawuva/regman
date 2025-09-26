@@ -1,0 +1,31 @@
+[project]
+name = "regman"
+version = "0.1.0"
+description = "Thread-safe registry framework for Python objects, plugins, strategies, handlers, or any reusable objects."
+authors = [
+    {name = "Ephraim Seddor",email = "seddorephraim7@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.10,<3.14"
+dependencies = [
+]
+
+[tool.poetry]
+packages = [{include = "regman", from = "src"}]
+
+exclude = ["examples*", "tests*"]
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.4.2"
+pytest-cov = "^7.0.0"
+ruff = "^0.13.2"
+black = "^25.9.0"
+isort = "^6.0.1"
+mypy = "^1.18.2"
+commitizen = "^4.9.1"
+pre-commit = "^4.3.0"
+types-pyyaml = "^6.0.12.20250915"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
