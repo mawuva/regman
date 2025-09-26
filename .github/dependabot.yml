@@ -1,0 +1,30 @@
+version: 2
+updates:
+  # ======================
+  # Dependencies (Poetry)
+  # ======================
+
+  - package-ecosystem: "pip"
+    directory: "/"           
+    schedule:
+      interval: "weekly"     
+    commit-message:
+      prefix: "deps"
+    labels:
+      - "dependencies"
+      - "python"
+    open-pull-requests-limit: 5
+
+  # ======================
+  # GitHub Actions
+  # ======================
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    commit-message:
+      prefix: "deps(ci)"
+    labels:
+      - "ci"
+      - "dependencies"
+
